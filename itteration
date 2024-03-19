@@ -1,0 +1,92 @@
+# iteration is another word for loops 
+# repating blocks of code over and over 
+# saves us time 
+# aviod us having to write the code multiple times 
+# WHILE loops and for loops
+
+# a while loop is going  to exicute code continuisly whilst a condition is true.
+# or when another condition is met and the loop breaks.
+# if a condition is never true the shile loop will never start 
+
+#print("1")
+#print("2")
+#print("3")
+#print("4")
+
+x = 0
+
+while x < 101:
+    print(x)
+    x += 1
+
+    break
+
+#i = 1
+
+#while i < 6:
+#    if i == 3:
+#        break
+#    print(i)
+#    i += 1
+
+# continue
+
+#j = 0
+
+#while j < 6:
+#    j += 1
+#    if j == 3:
+#        continue
+#    print(j)
+
+# while true - must have a cleary defined way of breaking
+# else statement will only run once it has stopped 
+    
+#while true:
+#    name = input ("enter your name: ")
+#    if name == "quit":
+#        break
+#    else:
+#        print(f"hello {name}")
+
+# for loops
+# a for loop will iterate over any collection - list/strings/dictionaries/sequences 
+# useful for when we want to use the data in a collection.abs
+
+#iterating through a list 
+
+#my_fruits = ["apple", "orange", "pear"]
+
+#for fruit in my_fruits:
+#    print(fruit)
+
+#numbers [1, 2, 3, 4]
+
+#for item in numbers
+#    print(item)
+
+
+
+import sys
+budget = 10
+flavours = ['chocolate', 'vanilla', 'strawberry']
+while budget >= 0:
+    budget = int(input("please enter how much money you have"))
+    selection = input("What flavour would you like? Chocolate, Vanilla or Strawberry ").lower()
+    if selection == 'chocolate':
+        print(f"here's your {flavours[0]} milkshake\n")
+        budget -= 3
+    elif selection == 'vanilla':
+        print(f"here's your {flavours[1]} milkshake\n")
+        budget -= 1
+    elif selection == 'strawberry':
+        budget -= 2
+        print(f"here's your {flavours[2]} milkshake\n")
+    else:
+        print("See you next time, Sam!")
+        sys.exit()
+    if budget <= 0:
+        print("You've had enough, you're barred...")
+        sys.exit()
+    
+    print(f"your budget is £{budget}")
